@@ -473,19 +473,16 @@ if(favorite_fruits.includes("orange"))
 // • If the username is 'admin', print a special greeting, such as Hello admin,
 //  would you like to see a status report?
 
-let users:string[] = ["admin","aliyan","afiyan","wajid"]
-
-for ( let user of users)
-    {
-        if (user ==="admin")
-            {
-                console.log("Hello admin, would you like to see a status report?");
-                
-            }
-        else {
-                console.log(`${new_user} is available ${user} thanks for visting here`);
-            }
+let names:string[] = ["admin","aliyan","afiyan","awais","wajid"];
+const greet = (input:string[]) =>{
+    for(let name of names){
+        name.includes("admin")? console.log(`Hello ${name} would like to see status`):
+        console.log(`hello ${name}`);
+        
     }
+}
+greet(names)
+
 
 // task 31
 // • If the list is empty, print the message We need to find some users!
